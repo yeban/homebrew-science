@@ -8,13 +8,11 @@ class Oswitch < Formula
   homepage 'https://github.com/yeban/oswitch'
 
   url  'https://github.com/yeban/oswitch/archive/v0.2.6.tar.gz'
-  sha1 'da85f60dee8ce75cff05bf0f795d888d17803dfd'
-
-  depends_on 'ruby'
+  sha256 'af3ce13305be8747242dc11bdd35360b568ea738be8c490d448915d4c675871f'
 
   def install
     # Build gem and install to prefix.
-    system "gem", "build", "oswitch.gemspec" 
+    system "gem", "build", "oswitch.gemspec"
 		system "gem", "install", "-i", "#{prefix}", "oswitch-#{version}.gem"
 
     # Re-write RubyGem generated bin stub to load oswitch from prefix.
