@@ -8,7 +8,7 @@ class Oswitch < Formula
   def install
     # Build gem and install to prefix.
     system "gem", "build", "oswitch.gemspec"
-    system "gem", "install", "-i", "#{prefix}", "oswitch-#{version}.gem"
+    system "gem", "install", "-i", prefix, "oswitch-#{version}.gem"
 
     # Re-write RubyGem generated bin stub to load oswitch from prefix.
     inreplace "#{bin}/oswitch" do |s|
